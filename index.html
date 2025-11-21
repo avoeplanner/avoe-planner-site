@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avoe Planner – Your Smart Wardrobe & Outfit Planner</title>
 
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -82,23 +86,10 @@
         gap: 10px;
       }
 
-      .logo-circle {
-        width: 32px;
-        height: 32px;
-        border-radius: 999px;
-        background: radial-gradient(
-          circle at 30% 20%,
-          #fed7aa 0,
-          #f97316 40%,
-          #7c2d12 100%
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 16px;
-        color: #020617;
-        box-shadow: 0 10px 25px rgba(248, 113, 22, 0.5);
+      .logo-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
       }
 
       .nav-title {
@@ -328,13 +319,17 @@
         width: 26px;
         height: 26px;
         border-radius: 10px;
-        background: linear-gradient(145deg, #f97316, #fb923c);
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 13px;
-        font-weight: 700;
-        color: #020617;
+      }
+
+      .hero-avatar-image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 10px;
       }
 
       .hero-card-body {
@@ -353,6 +348,7 @@
           #f97316 160%
         );
         padding: 12px;
+        padding-bottom: 40px; /* space for bottom pill */
         border: 1px solid rgba(148, 163, 184, 0.45);
         position: relative;
         overflow: hidden;
@@ -640,15 +636,19 @@
       }
 
       .store-icon {
-        width: 20px;
-        height: 20px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, #f97316, #fb923c);
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
-        color: #020617;
+      }
+
+      .store-icon-image {
+        width: 100%;
+        height: 100%;
+        display: block;
       }
 
       .store-text {
@@ -666,7 +666,7 @@
       .store-text span:last-child {
         font-size: 11px;
         font-weight: 500;
-        color: #f9fafb; /* main text bright */
+        color: #f9fafb; /* main label bright */
       }
 
       /* CONTACT / FOOTER */
@@ -747,7 +747,7 @@
       <!-- NAV -->
       <header class="nav">
         <div class="nav-left">
-          <div class="logo-circle">AP</div>
+          <img src="icon.png" alt="Avoe Planner icon" class="logo-image" />
           <div class="nav-title">Avoe Planner</div>
         </div>
         <nav class="nav-links">
@@ -818,7 +818,13 @@
                     Picked from items you’ve saved in Avoe Planner
                   </div>
                 </div>
-                <div class="hero-card-avatar">AP</div>
+                <div class="hero-card-avatar">
+                  <img
+                    src="icon.png"
+                    alt="Avoe Planner icon"
+                    class="hero-avatar-image"
+                  />
+                </div>
               </div>
 
               <div class="hero-card-body">
@@ -1031,7 +1037,13 @@
               <div class="store-buttons">
                 <!-- Add your real store links when live -->
                 <button class="store-btn">
-                  <div class="store-icon"></div>
+                  <div class="store-icon">
+                    <img
+                      src="icon.png"
+                      alt="Avoe Planner"
+                      class="store-icon-image"
+                    />
+                  </div>
                   <div class="store-text">
                     <span>Coming soon on</span>
                     <span>App Store</span>
@@ -1039,7 +1051,13 @@
                 </button>
 
                 <button class="store-btn">
-                  <div class="store-icon">▶</div>
+                  <div class="store-icon">
+                    <img
+                      src="icon.png"
+                      alt="Avoe Planner"
+                      class="store-icon-image"
+                    />
+                  </div>
                   <div class="store-text">
                     <span>Coming soon on</span>
                     <span>Google Play</span>
@@ -1057,7 +1075,6 @@
           >© <span id="year"></span> Avoe Planner. All rights reserved.</span
         >
         <div class="footer-links">
-          <!-- Contact link updated -->
           <a href="mailto:avoeplanner@gmail.com">Contact</a>
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
